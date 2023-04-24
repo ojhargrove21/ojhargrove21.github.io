@@ -14,3 +14,7 @@ aside{
 .layout-container::after{
     clear: both;
 }
+body
+{
+ background-color: #1f1f1f;   
+}
