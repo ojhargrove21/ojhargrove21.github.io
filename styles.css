@@ -16,17 +16,17 @@ aside{
 }
 body
 {
- background-color: #ffffff;   
+ background-color: #f5f0db;   
 }
 pre{
     color:rgb(96, 94, 197);
     align-items: center;
     font-family: 'Times New Roman', Times, serif;
-    font-size: 20px;
+    font-size: 1.5vw;
 }
 name
 {
-    color: rgb(54, 42, 163);
+    color: rgb(50, 47, 177);
     font-size: 30;
     font-weight: 100;
 }
@@ -44,9 +44,9 @@ name
     position: absolute;
     left: -10px;
     top: -10px;
-    width: 125px;
-    height: 105%;
-    background:  rgb(43, 41, 165);
+    width: 10vw;
+    height: 101.6%;
+    background:  rgb(63, 61, 221);
 } 
 
 
