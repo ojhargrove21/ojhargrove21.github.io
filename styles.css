@@ -106,17 +106,17 @@ background-color: blue;
   .bottomRefl{
     filter: blur(1vw);
   }
-  .cube { -webkit-transform-style: preserve-3d; }
-figure { -webkit-transform-origin: 50% 50% 0; }
-.front { -webkit-transform: translateZ(10vw); }
-.back { -webkit-transform: rotateY(180deg) translateZ(10vw); }
-.top { -webkit-transform: rotateX(90deg) translateZ(10vw); }
-.bottom { -webkit-transform: rotateX(-90deg) translateZ(10vw); }
-.bottomRefl{-webkit-transform: rotateX(-90deg) translateZ(10vw);}
-.left { -webkit-transform: rotateY(-90deg) translateZ(10vw); }
-.right { -webkit-transform: rotateY(90deg) translateZ(10vw); }
+  .cube { transform-style: preserve-3d; }
+figure { transform-origin: 50% 50% 0; }
+.front { transform: translateZ(10vw); }
+.back { transform: rotateY(180deg) translateZ(10vw); }
+.top { transform: rotateX(90deg) translateZ(10vw); }
+.bottom { transform: rotateX(-90deg) translateZ(10vw); }
+.bottomRefl{transform: rotateX(-90deg) translateZ(10vw);}
+.left { transform: rotateY(-90deg) translateZ(10vw); }
+.right { transform: rotateY(90deg) translateZ(10vw); }
 
-.cube{-webkit-transform: rotateY(30deg) rotateX(65deg);
+.cube{transform: rotateY(30deg) rotateX(65deg);
 
 }
 
@@ -154,17 +154,17 @@ background-color: blue;
 
   }
   
-  .cube1 { -webkit-transform-style: preserve-3d; }
-figure1 { -webkit-transform-origin: 50% 50% 0; }
-.front1 { -webkit-transform: translateZ(10vw); }
-.back1 { -webkit-transform: rotateY(180deg) translateZ(10vw); }
-.top1 { -webkit-transform: rotateX(90deg) translateZ(10vw); }
-.bottom1 { -webkit-transform: rotateX(-90deg) translateZ(10vw); }
-.bottomRefl1{-webkit-transform: rotateX(-90deg) translateZ(10vw);}
-.left1 { -webkit-transform: rotateY(-90deg) translateZ(10vw); }
-.right1 { -webkit-transform: rotateY(90deg) translateZ(10vw); }
+  .cube1 { transform-style: preserve-3d; }
+figure1 { transform-origin: 50% 50% 0; }
+.front1 { transform: translateZ(10vw); }
+.back1 { transform: rotateY(180deg) translateZ(10vw); }
+.top1 { transform: rotateX(90deg) translateZ(10vw); }
+.bottom1 { transform: rotateX(-90deg) translateZ(10vw); }
+.bottomRefl1{-transform: rotateX(-90deg) translateZ(10vw);}
+.left1 { transform: rotateY(-90deg) translateZ(10vw); }
+.right1 { transform: rotateY(90deg) translateZ(10vw); }
 
-.cube1{-webkit-transform: rotateY(-45deg) rotateX(30deg) rotateZ(-10deg);
+.cube1{transform: rotateY(-45deg) rotateX(30deg) rotateZ(-10deg);
 
 }
 
