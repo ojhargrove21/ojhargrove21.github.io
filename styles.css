@@ -66,8 +66,8 @@ h3{
 
 .stage {
     width: 100%; height: 100%;
-    -webkit-perspective: 1600px;
-    -webkit-perspective-origin: 50% -240px;
+    perspective: 1600px;
+    perspective-origin: 50% -240px;
     position: absolute;
     left: 0%;
     top: 0vw;
@@ -160,7 +160,7 @@ figure1 { transform-origin: 50% 50% 0; }
 .back1 { transform: rotateY(180deg) translateZ(10vw); }
 .top1 { transform: rotateX(90deg) translateZ(10vw); }
 .bottom1 { transform: rotateX(-90deg) translateZ(10vw); }
-.bottomRefl1{-transform: rotateX(-90deg) translateZ(10vw);}
+.bottomRefl1{transform: rotateX(-90deg) translateZ(10vw);}
 .left1 { transform: rotateY(-90deg) translateZ(10vw); }
 .right1 { transform: rotateY(90deg) translateZ(10vw); }
 
