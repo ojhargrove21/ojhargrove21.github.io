@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile Food Planner</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src = "RecipyInsert.js"></script>
+    <script src="Pages.js"></script>
+    <script src="Browse.js"></script>
+</head>
+<body>
+
+    <div id="container" class="RecipyInsert">
+        <div id="done">
+            <img src="./Assets/Check Button.png" id="check" onclick="home()">
+            <img src="./Assets/XButton.png" id="X" onclick="home()">
+        </div>
+        
+        <input type="text" id="itemSearch" placeholder="Search..." onkeydown="Enter(event)">
+        <ul id="insertList"></ul>
+        
+    </div>
+    <div id="container" class="Home">
+        <div id="footerBar" > 
+            <img src="./Assets/TrashButton.png" id="Trash">
+            <img src="./Assets/HomeButton.png" id="HomeButton">
+            <img src="./Assets/PlusButton.png" id="Plus" onclick="InsertRecipy()">
+        </div>
+       
+        <div id="selectBar"> <img id="MyPlan" src="Assets/My Plan.png">
+            <img id="MyRecipies" src="./Assets/MyRecipies.png" onclick="myRecipies()">
+            <img id="Browse" src="./Assets/Browse.png"onclick="Browse()">
+        </div>
+       
+    <div id="images">
+        <div style="width: 45%; aspect-ratio: 1; position: absolute; top: 5%;"><img src="./Assets/Dish1.webp" style="width: 100%; height: 100%;"></div>
+        <div style="width: 45%; aspect-ratio: 1; position: absolute; top: 5%; left: 52%;"><img src="./Assets/Dish3.jpg" style="width: 100%; height: 100%;"></div>
+        <div style="width: 45%; aspect-ratio: 1; position: absolute; top: 31%;"><img src="./Assets/Dish2.jpeg" style="width: 100%; height: 100%;"></div>
+        <div style="width: 45%; aspect-ratio: 1; position: absolute; top: 31%; left:52%;"><img src="./Assets/Dish4.webp" style="width: 100%; height: 100%;"></div>
+        <div style="width: 45%; aspect-ratio: 1; position: absolute; top: 57%;"><img src="./Assets/Dish5.jpg" style="width: 100%; height: 100%;"></div>
+        <div style="width: 45%; aspect-ratio: 1; position: absolute; top: 57%; left: 52%;"><img src="./Assets/Dish6.jpg" style="width: 100%; height: 100%;"></div>
+        <div style="width: 45%; aspect-ratio: 1; position: absolute; top: 83%; left: 25%;"><img src="./Assets/Dish7.jfif" style="width: 100%; height: 100%;"></div>
+        <div style="width: 45%; aspect-ratio: 1; position: absolute; top: 107%; background-color:rgba(0, 0, 0, 0);"></div>
+
+
+    </div>
+    </div>
+    
+    <div id="container" class="Recipies">
+        <div id="footerBar" > 
+            <img src="./Assets/TrashButton.png" id="Trash">
+            <img src="./Assets/HomeButton.png" id="HomeButton">
+            <img src="./Assets/PlusButton.png" id="Plus" onclick="InsertRecipy()"></div>
+       
+        <div id="selectBar"> 
+            <img id="MyPlan" src="./Assets/My Plan.png" onclick="home()">
+            <img id="MyRecipies" src="./Assets/MyRecipies.png" onclick="myRecipies()">
+            <img id="Browse" src="./Assets/Browse.png" onclick="Browse()"></div>
+        <div id="images">
+            <div style="width: 45%; aspect-ratio: 1; position: absolute; top: 5%;"><img src="./Assets/Dish1.webp" style="width: 100%; height: 100%;"></div>
+            <div style="width: 45%; aspect-ratio: 1; position: absolute; top: 5%; left: 52%;"><img src="./Assets/Dish3.jpg" style="width: 100%; height: 100%;"></div>
+            <div style="width: 45%; aspect-ratio: 1; position: absolute; top: 31%;"><img src="./Assets/Dish2.jpeg" style="width: 100%; height: 100%;"></div>
+            <div style="width: 45%; aspect-ratio: 1; position: absolute; top: 31%; left:52%;"><img src="./Assets/Dish4.webp" style="width: 100%; height: 100%;"></div>
+            <div style="width: 45%; aspect-ratio: 1; position: absolute; top: 57%;"><img src="./Assets/Dish5.jpg" style="width: 100%; height: 100%;"></div>
+            <div style="width: 45%; aspect-ratio: 1; position: absolute; top: 57%; left: 52%;"><img src="./Assets/Dish6.jpg" style="width: 100%; height: 100%;"></div>
+            <div style="width: 45%; aspect-ratio: 1; position: absolute; top: 83%; left: 0%;"><img src="./Assets/Dish7.jfif" style="width: 100%; height: 100%;"></div>
+            <div style="width: 45%; aspect-ratio: 1; position: absolute; top: 83%; left: 52%;"><img src="./Assets/Dish7.jfif" style="width: 100%; height: 100%;"></div>
+            <div style="width: 45%; aspect-ratio: 1; position: absolute; top: 109%; left: 0%;"><img src="./Assets/Dish7.jfif" style="width: 100%; height: 100%;"></div>
+
+            <div style="width: 45%; aspect-ratio: 1; position: absolute; top: 107%; background-color:rgba(0, 0, 0, 0);"></div>
+    
+    
+    </div>
+    </div>
+    <div id="container" class="Browse">
+        <div id="selectBar" style="position: relative; top: 1%;"> 
+            <img id="MyPlan" src="./Assets/My Plan.png" onclick="home()">
+            <img id="MyRecipies" src="./Assets/MyRecipies.png" onclick="myRecipies()">
+            <img id="Browse" src="./Assets/Browse.png" onclick="Browse()"></div>
+        <img src="./Assets/Dish1.webp" style="width: 100%;height: 45%; position: relative; top: 10%;" id="rImage">
+        <textarea id="rRecipy" readonly="true">
+Servings: 5
+
+Onion
+Garlic
+Potato
+
+Instructions
+
+Simmer Onion and garlic in large pot
+Boil Potato
+Mash Potato
+Combin in Large serving dish
+Garnish</textarea>
+
+        <div id="sel" style="position: relative; top: 15%;">
+            <img src="./Assets/Check Button.png" id="check" onclick="imgNext()">
+            <img src="./Assets/XButton.png" id="X" onclick="imgNext()">
+        </div>
+      
+    </div>
+</body>
+</html>
