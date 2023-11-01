@@ -1,262 +1,170 @@
-
-html, body{
-    overflow-x: hidden;
-}
 body{
-    background-color: rgb(3, 27, 58);
+    background:linear-gradient(180deg,rgba(0, 0, 0, 0.521),rgb(255, 30, 0) 40%),radial-gradient(ellipse at left bottom,rgba(0, 0, 0, 0.753),rgba(0,0,0,0) );
+
 }
-
-h1{
-    align-items: center;
-    color: rgb(219, 238, 255);
-    position: absolute;
-    left: 30%;
-    top: 18vw;
-    font-size: 5vw;
-}
-h2{
-    align-items: center;
-    color: rgb(219, 238, 255);
-    position: absolute;
-    left: 30%;
-    top: 26vw;
-    font-size: 2vw;
-}
-h3{
-    color: rgb(219, 238, 255);
-    position: absolute;
-    left: 1.5%;
-    top: -0.8vw;
-    font-size: 2vw;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.stage {
-    width: 100%; height: 100%;
-    perspective: 1600px;
-    perspective-origin: 50% -240px;
-    position: absolute;
-    left: 0%;
-    top: 0vw;
-  }
-  .cube{
+#container {
+    margin-top: 100px;
+background-color: transparent;    
+    background-size: cover;
+    background-repeat: no-repeat;
     position: relative;
-    left:22.5%;
-    top: 13vw;
-  }
-  figure {
-    display: block; position: absolute;
-    width: 20vw; height: 20vw;
-  }
-  .front{
-    background: radial-gradient(circle at 85% 60%, rgb(3, 193, 226),rgb(6, 60, 131));
- }
-  .bottom{
-    background: radial-gradient(circle at 65% 10%, rgb(12, 85, 180),rgb(3, 27, 58));
-
-  }
-  .back{
-background-color: blue;
-  }
-  .top{
-    background-color: blue;
-
-  }
-  .left{
-    background: radial-gradient(circle at 30% 35%, rgb(3, 165, 194),rgb(15, 76, 156));
-
-  }
-  .right{
-    background-color: blue;
-
-  }
-  .bottomRefl{
-    filter: blur(1vw);
-  }
-  .cube { transform-style: preserve-3d; }
-figure { transform-origin: 50% 50% 0; }
-.front { transform: translateZ(10vw); }
-.back { transform: rotateY(180deg) translateZ(10vw); }
-.top { transform: rotateX(90deg) translateZ(10vw); }
-.bottom { transform: rotateX(-90deg) translateZ(10vw); }
-.bottomRefl{transform: rotateX(-90deg) translateZ(10vw);}
-.left { transform: rotateY(-90deg) translateZ(10vw); }
-.right { transform: rotateY(90deg) translateZ(10vw); }
-
-.cube{transform: rotateY(30deg) rotateX(65deg);
+    border-radius: 10px;
+    padding: 20px;
+    max-width: 350px;
+    margin: auto;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    aspect-ratio: 0.45;
+    z-index: 2;
+    resize: none;
+    max-height: 777px;
 
 }
-
-/* ------------------------------------------------------------------- */
-
-figure1 {
-    display: block; position: absolute;
-    width: 20vw; height: 20vw;
-  }
-  .cube1{
+#insertList{
+    background-color: rgb(71, 27, 27);
     position: relative;
-    left: 8%;
-    top: 2vw;
-  }
-  .front1{
-    background: radial-gradient(circle at 85% 60%, rgb(6, 136, 223),rgb(6, 60, 131));
- }
-  .bottom1{
-    background: radial-gradient(circle at 65% 10%, rgb(12, 85, 180),rgb(3, 27, 58));
-
-  }
-  .back1{
-background-color: blue;
-  }
-  .top1{
-    background-color: blue;
-
-  }
-  .left1{
-    background: radial-gradient(circle at 30% 35%, rgb(10, 116, 134),rgb(9, 57, 121));
-
-  }
-  .right1{
-    background: radial-gradient(circle at 95% 30%, rgb(12, 142, 165),rgb(6, 60, 131));
-
-  }
-  
-  .cube1 { transform-style: preserve-3d; }
-figure1 { transform-origin: 50% 50% 0; }
-.front1 { transform: translateZ(10vw); }
-.back1 { transform: rotateY(180deg) translateZ(10vw); }
-.top1 { transform: rotateX(90deg) translateZ(10vw); }
-.bottom1 { transform: rotateX(-90deg) translateZ(10vw); }
-.bottomRefl1{transform: rotateX(-90deg) translateZ(10vw);}
-.left1 { transform: rotateY(-90deg) translateZ(10vw); }
-.right1 { transform: rotateY(90deg) translateZ(10vw); }
-
-.cube1{transform: rotateY(-45deg) rotateX(30deg) rotateZ(-10deg);
-
+    width: auto;
+    height: 80%;
+    top: 0%;
+    z-index: 0;
+    
 }
-
-.front2{
-    overflow: hidden;
-    position: fixed;
-    left: -1vw;
-    top: -0vw;
-    width: 110%;
-    height: 5vw;
-    background: radial-gradient(circle at 65% 10%, rgb(7, 78, 170),rgb(6, 60, 131));
-
-}
-.bottom2{
-    overflow: hidden;
-    position: fixed;
-    left: -1vw;
-    top: 5vw;
-    width: 110%;
-    height: 1vw;
-    background: radial-gradient(circle at 65% 10%, rgb(7, 36, 99),rgb(4, 36, 78));
-
-
-}
-
-
-.circle {
-    display: block;
-    background: black;
-    border-radius: 50%;
-    position: absolute;
-    left: 57%;
-    top: 10vw;
-    height: 7vw;
-    width: 7vw;
-    margin: 0;
-    background: radial-gradient(circle at 65% 65%, rgb(4, 87, 196),rgb(19, 220, 255));
-  }
-  .circle1 {
-    display: block;
-    background: black;
-    border-radius: 50%;
-    position: absolute;
-    left: 50%;
-    top: 4vw;
-    height: 20vw;
-    width: 20vw;
-    margin: 0;
-    filter: blur(10vw);
-    background: radial-gradient(circle at 65% 65%, rgba(6, 128, 150, 0.75),rgba(19, 220, 255,0.55));
-  
-}
-.circle2 {
-    display: block;
-    background: black;
-    border-radius: 50%;
-    position: absolute;
-    left: 52.5%;
-    top: 6.5vw;
-    height: 15vw;
-    width: 15vw;
-    margin: 0;
-    filter: blur(2vw);
-    background: radial-gradient(circle at 65% 65%, rgba(57, 113, 187, 0.95),rgba(19, 220, 255,0.85));
-  
-}
-.shadow {
-    display: block;
-    background: black;
-    border-radius: 50%;
+#X{
     position: relative;
-    left: 1%;
-    top: 125%;
-    height: 12vw;
+    top: 90%;
+    z-index: 1;
+    width: 17%;
+    left: 65%;
+}
+#check{
+    position: relative;
+    top: 90%;
+    z-index: 1;
+    width: 17%;
+}
+#done{
+    position: relative;
+    top: 91%;
+    height: 1%;
+}
+#itemSearch{
+    position: relative;
+    top: 0%;
+    z-index: 1;
     width: 100%;
-    margin: 0;
-    filter: blur(5vw);
-    background: radial-gradient(circle at 65% 65%, rgba(16, 43, 78, 0.95),rgba(7, 112, 131, 0.85));
-  
+    background-color: rgb(48, 19, 19);
+    color: aliceblue;
+}
+ul{
+    list-style-type: none;
+    padding: 0;
+}
+li{
+    color: aliceblue;
 }
 
-.circle3 {
+#Trash{
+    z-index: 1;
+    position: relative;
+    top: 93%;
+    left: 5%;
+    width: 15%;
+}
+#HomeButton{
+    z-index: 1;
+    position: relative;
+    top: 93%;
+    left: 26%;
+    width: 15%;
+}
+#Plus{
+    z-index: 1;
+    position: relative;
+    top: 93%;
+    left: 47%;
+    width: 15%;
+}
+#MyPlan{
+    position: relative;
+    left: 5%;
+    top: -3%;
+    width: 15%;
+}
+#MyRecipies{
+    position: relative;
+    left: 25%;
+    top: -3%;
+    width: 24%;
+
+}
+#Browse{
+    position: relative;
+    left: 40%;
+    top: -6.5%;
+    width: 15%;
+
+
+}
+#images{
+    position: relative;
+    width: 100%;
+    height: 90%;
+    top: -5%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    max-height: 90%;    
+}
+#images::-webkit-scrollbar
+{
+    display: none;
+    max-height: 100px;
+}
+#footerBar{
+    position: relative;
+    top: 95%;
+    background-color: rgb(255, 30, 0);
+    z-index: 10;
+}
+#selectBar{
+    position: relative;
+    top: -6%;
+}
+#sel{
+    position: relative;
+    top: 2%;
+}
+#rRecipy{
+    position: relative;
+    width: 98%;
+    height: 25%;
+    top: 10%;
+    background-color: antiquewhite;
+    font-family:'Times New Roman', Times, serif;
+}
+.imgRow{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 4px;
+}
+.imgCol{
+    flex: 50%;
+    padding: 0 px;
+}
+.imgCol img{
+    margin-top: 8px;
+    vertical-align: middle;
+    width: 40%;
+}
+
+
+.Recipies{
     display: block;
-    background: black;
-    border-radius: 50%;
-    position: absolute;
-    left: 60%;
-    top: 145%;
-    height: 40vw;
-    width: 40vw;
-    margin: 0;
-    filter: blur(10vw);
-    background: radial-gradient(circle at 50% 50%, rgba(1, 43, 8, 0.95),rgba(19, 220, 255,0.85));
-  
+}
+.RecipyInsert{
+    display: none;
+}
+.Home{
+    display: none;
+}
+.Browse{
+    display: none;
 }

@@ -1,104 +1,104 @@
 <!DOCTYPE html>
-<html>
-   <head>
-    <link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css" />
-    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.1.1/model-viewer.min.js"></script>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile Food Planner</title>
     <link rel="stylesheet" href="styles.css">
-   </head>
-<script>
+    <script src = "RecipyInsert.js"></script>
+    <script src="Pages.js"></script>
+    <script src="Browse.js"></script>
+</head>
+<body>
 
-modelViewerTransform.scale = `15 15 15`;
-</script>
-   <body>
-    <p id="aboutMe" style="position: absolute;left: 15%;top: 120%;"></p>
-    <h1  style="position: absolute;left: 15%;top: 160%; font-size: 3vw;">About Me</h1>
-    <h2 style="position: absolute;left: 15%;top: 175%;width: 40vw;">Hi, I am Owen Hargrove. I am a computer science student at Thomas College and expect to graduate May 2024. </h2>
-    <div class="circle3"></div>
-
-    
-    <img src="Profile.jfif" style="width: 30vw; height: 30vw; border-radius: 50%; position: absolute; top: 155%; left: 65%; background:radial-gradien(circle at 65% 65%, rgba(57, 113, 187, 0.95),rgba(19, 220, 255,0.0));">
-    
-
-    <p id="Projects" style="position: absolute;left: 15%;top: 245%;"></p>
-    <h1 style="position: absolute;left: 15%;top: 260%; font-size: 3vw;">Projects</h1>
-<h2 style="position: absolute;left: 15%;top: 275%;width: 40vw;">Number Detection AI</h2>
-<h3 style="position: absolute;left: 15%;top: 280%;width: 50vw;">
-AI that can be used to detect writen number in an image.
-</h3>
-<h2 style="position: absolute;left: 15%;top: 295%;width: 40vw;">Web Scraper</h2>
-<h3 style="position: absolute;left: 15%;top: 300%;width: 50vw;">
-Scrapes data and stores key words in a dictionary object for later use.
-</h3>
-<h2 style="position: absolute;left: 15%;top: 315%;width: 40vw;">Stock Prediction AI</h2>
-<h3 style="position: absolute;left: 15%;top: 320%;width: 50vw;">
-Predicts values to stocks 1 day in advaced using both stock data and web scraped data from news sources to collect sentament data of the words. for example happy, sad, angry, ext.
-</h3>
-<h2 style="position: absolute;left: 15%;top: 350%;width: 40vw; color:  rgb(160, 190, 216);" onclick="window.location.href ='https://github.com/ojhargrove21/Portfolio'">Click here to be brought to projects page</h2>
-
-<p id="Contact"style="position: absolute;left: 15%;top: 370%;" ></p>
-
-<h1 style="position: absolute;left: 15%;top: 390%;width: 40vw; font-size: 3vw;">Contact</h1>
-<h2 style="position: absolute;left: 15%;top: 405%;width: 40vw;">Phone: (207)314-8644</h2>
-<h2 style="position: absolute;left: 15%;top: 415%;width: 40vw;">Email: owenjhargrove@gmail.com</h2>
-<div class = "bottom button "style="position: absolute;left: 15%;top: 460%;width: 40vw; background: radial-gradient(circle at 85% 60%, rgb(3, 193, 226),rgb(6, 60, 131));">
-   Back to the top</div>
-
-</body>
-<p id="Home" style="position: absolute;left: 0%;top: 0%;"></p>
-   <div class="stage">
-
-
-    <div class="cube1">
-        <figure1 class="back1"></figure1>
-        <figure1 class="top1"></figure1>
-        <figure1 class="bottom1"></figure1>
-        <figure1 class="left1"></figure1>
-        <figure1 class="right1"></figure1>
-        <figure1 class="front1"></figure1>
-      </div>
-    <div class="cube">
-      <figure class="back"></figure>
-      <figure class="top"></figure>
-      <figure class="bottom"></figure>
-      <figure class="left"></figure>
-      <figure class="right"></figure>
-      <figure class="front"></figure>
+    <div id="container" class="RecipyInsert">
+        <div id="done">
+            <img src="./Assets/Check Button.png" id="check" onclick="home()">
+            <img src="./Assets/XButton.png" id="X" onclick="home()">
+        </div>
+        
+        <input type="text" id="itemSearch" placeholder="Search..." onkeydown="Enter(event)">
+        <ul id="insertList"></ul>
+        
     </div>
-    <div class="circle1"></div>
+    <div id="container" class="Home">
+        <div id="footerBar" > 
+            <img src="./Assets/TrashButton.png" id="Trash">
+            <img src="./Assets/HomeButton.png" id="HomeButton">
+            <img src="./Assets/PlusButton.png" id="Plus" onclick="InsertRecipy()">
+        </div>
+       
+        <div id="selectBar"> <img id="MyPlan" src="Assets/My Plan.png">
+            <img id="MyRecipies" src="./Assets/MyRecipies.png" onclick="myRecipies()">
+            <img id="Browse" src="./Assets/Browse.png"onclick="Browse()">
+        </div>
+       
+    <div id="images">
+        <div style="width: 45%; aspect-ratio: 1; position: absolute; top: 5%;"><img src="./Assets/Dish1.webp" style="width: 100%; height: 100%;"></div>
+        <div style="width: 45%; aspect-ratio: 1; position: absolute; top: 5%; left: 52%;"><img src="./Assets/Dish3.jpg" style="width: 100%; height: 100%;"></div>
+        <div style="width: 45%; aspect-ratio: 1; position: absolute; top: 31%;"><img src="./Assets/Dish2.jpeg" style="width: 100%; height: 100%;"></div>
+        <div style="width: 45%; aspect-ratio: 1; position: absolute; top: 31%; left:52%;"><img src="./Assets/Dish4.webp" style="width: 100%; height: 100%;"></div>
+        <div style="width: 45%; aspect-ratio: 1; position: absolute; top: 57%;"><img src="./Assets/Dish5.jpg" style="width: 100%; height: 100%;"></div>
+        <div style="width: 45%; aspect-ratio: 1; position: absolute; top: 57%; left: 52%;"><img src="./Assets/Dish6.jpg" style="width: 100%; height: 100%;"></div>
+        <div style="width: 45%; aspect-ratio: 1; position: absolute; top: 83%; left: 25%;"><img src="./Assets/Dish7.jfif" style="width: 100%; height: 100%;"></div>
+        <div style="width: 45%; aspect-ratio: 1; position: absolute; top: 107%; background-color:rgba(0, 0, 0, 0);"></div>
 
-      <div class="circle"></div>
 
-      <div class="shadow"></div>
-
-      <div class="shadow" style="border-radius: 40px; position: absolute; left: 70%; top: 250%; width: 40vw;height: 50vw; filter: blur(15vw);"></div>
-
-      <h1>Owen Hargrove</h1>
-  </div>
-  <h2>Computer Science Student Thomas College</h2>
-   
-   </div>
-   <figure1 class="bottom2"></figure1>
-   <figure1 class="front2">
-<h3>OwenHargrove._</h3>
-<h3 style="position: absolute;left: 20%;" onclick="window.location.href = '#Home'">Home</h3>
-<h3 style="position: absolute;left: 27%;" onclick="window.location.href = '#aboutMe'">About Me</h3>
-<h3 style="position: absolute;left: 37%;" onclick="window.location.href = '#Projects'">Projects</h3>
-<h3 style="position: absolute;left: 45%;" onclick="window.location.href = '#Contact'">Contact</h3>
-
-
-   </figure1
-   <div class="stage">
-      
+    </div>
+    </div>
     
-      <div class="circle2"></div>
+    <div id="container" class="Recipies">
+        <div id="footerBar" > 
+            <img src="./Assets/TrashButton.png" id="Trash">
+            <img src="./Assets/HomeButton.png" id="HomeButton">
+            <img src="./Assets/PlusButton.png" id="Plus" onclick="InsertRecipy()"></div>
+       
+        <div id="selectBar"> 
+            <img id="MyPlan" src="./Assets/My Plan.png" onclick="home()">
+            <img id="MyRecipies" src="./Assets/MyRecipies.png" onclick="myRecipies()">
+            <img id="Browse" src="./Assets/Browse.png" onclick="Browse()"></div>
+        <div id="images">
+            <div style="width: 45%; aspect-ratio: 1; position: absolute; top: 5%;"><img src="./Assets/Dish1.webp" style="width: 100%; height: 100%;"></div>
+            <div style="width: 45%; aspect-ratio: 1; position: absolute; top: 5%; left: 52%;"><img src="./Assets/Dish3.jpg" style="width: 100%; height: 100%;"></div>
+            <div style="width: 45%; aspect-ratio: 1; position: absolute; top: 31%;"><img src="./Assets/Dish2.jpeg" style="width: 100%; height: 100%;"></div>
+            <div style="width: 45%; aspect-ratio: 1; position: absolute; top: 31%; left:52%;"><img src="./Assets/Dish4.webp" style="width: 100%; height: 100%;"></div>
+            <div style="width: 45%; aspect-ratio: 1; position: absolute; top: 57%;"><img src="./Assets/Dish5.jpg" style="width: 100%; height: 100%;"></div>
+            <div style="width: 45%; aspect-ratio: 1; position: absolute; top: 57%; left: 52%;"><img src="./Assets/Dish6.jpg" style="width: 100%; height: 100%;"></div>
+            <div style="width: 45%; aspect-ratio: 1; position: absolute; top: 83%; left: 0%;"><img src="./Assets/Dish7.jfif" style="width: 100%; height: 100%;"></div>
+            <div style="width: 45%; aspect-ratio: 1; position: absolute; top: 83%; left: 52%;"><img src="./Assets/Dish7.jfif" style="width: 100%; height: 100%;"></div>
+            <div style="width: 45%; aspect-ratio: 1; position: absolute; top: 109%; left: 0%;"><img src="./Assets/Dish7.jfif" style="width: 100%; height: 100%;"></div>
 
+            <div style="width: 45%; aspect-ratio: 1; position: absolute; top: 107%; background-color:rgba(0, 0, 0, 0);"></div>
+    
+    
+    </div>
+    </div>
+    <div id="container" class="Browse">
+        <div id="selectBar" style="position: relative; top: 1%;"> 
+            <img id="MyPlan" src="./Assets/My Plan.png" onclick="home()">
+            <img id="MyRecipies" src="./Assets/MyRecipies.png" onclick="myRecipies()">
+            <img id="Browse" src="./Assets/Browse.png" onclick="Browse()"></div>
+        <img src="./Assets/Dish1.webp" style="width: 100%;height: 45%; position: relative; top: 10%;" id="rImage">
+        <textarea id="rRecipy" readonly="true">
+Servings: 5
 
-  
-  </div>
+Onion
+Garlic
+Potato
 
-  
+Instructions
 
-   
-   
-   
-   </html>
+Simmer Onion and garlic in large pot
+Boil Potato
+Mash Potato
+Combin in Large serving dish
+Garnish</textarea>
+
+        <div id="sel" style="position: relative; top: 15%;">
+            <img src="./Assets/Check Button.png" id="check" onclick="imgNext()">
+            <img src="./Assets/XButton.png" id="X" onclick="imgNext()">
+        </div>
+      
+    </div>
+</body>
+</html>
